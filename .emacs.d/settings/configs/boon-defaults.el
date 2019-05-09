@@ -1,0 +1,15 @@
+;;(define-key boon-command-map [(return)] 'undefined)
+;;(define-key boon-command-map (kbd "<RET>") 'undefined)
+;;(define-key boon-command-map [(backspace)] 'undefined)
+;;(define-key boon-command-map (kbd "<DEL>") 'undefined)
+
+
+(define-key boon-command-map [escape] 'boon-quit)
+(define-key boon-special-map [escape] 'boon-set-command-state)
+(define-key boon-insert-map [escape] 'boon-set-command-state)
+(define-key global-map [escape] 'keyboard-quit)
+(define-key minibuffer-local-map [escape] 'keyboard-quit)
+(define-key minibuffer-local-ns-map [escape] 'keyboard-quit)
+(define-key minibuffer-local-completion-map [escape] 'keyboard-quit)
+(define-key minibuffer-local-must-match-map [escape] 'keyboard-quit)
+(define-key isearch-mode-map [escape] 'isearch-abort)

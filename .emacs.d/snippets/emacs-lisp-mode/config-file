@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: config-file
+# key: cfg
+# --
+:config (load-file "~/.emacs.d/settings/configs/${1:filename}.el")

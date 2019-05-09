@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: use-package_straight
+# key: ups
+# --
+(use-package ${1:packagename} :straight t :no-require t)

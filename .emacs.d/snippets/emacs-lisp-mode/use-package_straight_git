@@ -1,0 +1,4 @@
+# key: upsg
+# name: use-package_straight_git
+# --
+(use-package ${1:packagename} :straight (${2:packagename} :host ${3:hostname) :repo "${4:reponame}")
