@@ -14,7 +14,7 @@
     coding-system-for-write 'utf-8
     )
 
-(setq default-directory "~")
+(setq default-directory "~/")
 (setq inhibit-startup-screen t)
 
 (setq frame-title-format
@@ -60,7 +60,7 @@
 (setq confirm-kill-emacs #'y-or-n-p)
 
 (add-hook 'text-mode-hook 'auto-fill-mode)
-(setq-default fill-column 80)
+(setq-default fill-column 99)
 
 
 (setq

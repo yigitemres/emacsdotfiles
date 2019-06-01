@@ -81,6 +81,7 @@ _h_ ^+^ _l_ | _u_nmark  ^ |
     "window"
 
     ("TAB" ace-window "ace window")
+    ("a" ace-window "ace window")
     ("h" split-window-below "split below")
     ("s" ace-swap-window "swap")
     ("v" split-window-right "split right")
@@ -91,7 +92,7 @@ _h_ ^+^ _l_ | _u_nmark  ^ |
 (defhydra hydra-zoom()
     "zoom"
 
-    ("<kp-add>" text-scale-increase "increase")
-    ("<kp-subtract>" text-scale-decrease "decrease")
+    ("i" text-scale-increase "increase")
+    ("d" text-scale-decrease "decrease")
     ("r" (text-scale-set 0) "reset" )
     )

@@ -111,4 +111,5 @@
     "ss"    "swiper"
     "t"     "treemacs"
     "z"     "zoom"
+
     )

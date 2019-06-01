@@ -1,9 +1,9 @@
 ;;; dotEmacs --- Summary
 ;;; Commentary:
-;;; TODO: Add raxod502/blackout config.
 ;;; TODO: Add vermiculus/magithub config.
 ;;; TODO: Add alphapapa/magit-todos config.
 ;;; TODO: Add multiple-cursors config.
+;;; TODO: Add hyperbole's zoom-frm package.
 ;;; Code:
 
 
@@ -22,6 +22,9 @@
 (load-file "~/.emacs.d/settings/configs/fonts.el")
 (load-file "~/.emacs.d/settings/bootstraps/bootstrap.el")
 
+
+;;(use-package hyperbole :straight t :no-require t)
+
 ;; Packages
 (use-package ace-popup-menu :straight t :no-require t)
 (use-package ace-window :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/ace-window.el"))
@@ -36,6 +39,7 @@
 (use-package company-lsp :straight :no-require t :after lsp-mode company :config (load-file "~/.emacs.d/settings/configs/company-lsp.el"))
 (use-package counsel :straight t :no-require t)
 (use-package crux :straight t :no-require t)
+(use-package ctags :straight t :no-require t)
 (use-package dap-mode :straight t :no-require t)
 (use-package dashboard :straight t :no-require t)
 (use-package deadgrep :straight t :no-require t)
@@ -58,12 +62,15 @@
 (use-package focus :straight t :no-require t)
 (use-package forge :straight t :no-require t :requires magit :after magit)
 (use-package general :disabled :straight t :no-require t :after which-key :config (load-file "~/.emacs.d/settings/configs/general.el"))
+(use-package ggtags :straight t :no-require t)
 (use-package goto-line-preview :straight t :no-require t)
+(use-package gtags :straight t :no-require t)
 (use-package helm :disabled :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/helm.el"))
 (use-package hl-todo :straight t :no-require t)
 (use-package hydra :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/hydra.el"))
 (use-package ivy :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/ivy.el"))
-(use-package latex-preview-pane :straight t :no-require t)
+(use-package ivy-posframe :straight t :no-require t :requires ivy :after ivy)
+(use-package latex-preview-pane :disabled :straight t :no-require t)
 (use-package linum-relative :disabled :straight t :config (load-file "~/.emacs.d/settings/configs/linum-relative.el"))
 (use-package lsp-mode :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/lsp-mode.el"))
 (use-package lsp-ui :straight t :no-require t :after lsp-mode :config (load-file "~/.emacs.d/settings/configs/lsp-ui.el"))
@@ -80,7 +87,7 @@
 (use-package org-download :straight t :no-require t)
 (use-package org-ioslide :straight (ox-ioslide) :no-require t)
 (use-package org-page :straight t :no-require t)
-(use-package org-plus-contrib :straight t :no-require t)
+(use-package org-plus-contrib :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/org.el"))
 (use-package org-timeline :straight t :no-require t)
 (use-package org-toc :straight (toc-org) :no-require t)
 (use-package origami :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/origami.el"))
@@ -89,8 +96,10 @@
 (use-package pretty-mode :straight t :no-require t)
 (use-package prodigy :straight t :no-require t)
 (use-package projectile :straight t :no-require t)
+(use-package ripgrep :straight t :no-require t)
 (use-package smart-mode-line :disabled :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/smart-mode-line.el"))
 (use-package smartparens :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/smartparens.el"))
+(use-package ssh-agency :straight t :no-require t)
 (use-package swiper :straight t :no-require t)
 (use-package swiper-helm :disabled :straight t :no-require t :requires helm)
 (use-package sx :straight t :no-require t)
@@ -111,7 +120,5 @@
 
 ;; Themes
 (use-package doom-themes :straight t :no-require t :config (load-theme 'doom-dracula t))
-
-;;(load-file "~/.emacs.d/settings/configs/org.el")
 
 (load-file custom-file)

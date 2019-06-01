@@ -4,10 +4,11 @@
 ;; Noto Mono
 ;; FuraCode NF (FiraCode)
 ;; Source Code Pro
+;; DejaVuSansMono NF
 ;;;;;;;;;;;;;
 
 (setq
-    selectedfont "Iosevka NF"
+    selectedfont "FuraCode NF-9"
     fallbackfont "Consolas"
     )
 
