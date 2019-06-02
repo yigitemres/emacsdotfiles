@@ -4,8 +4,7 @@
 ;;; TODO: Add alphapapa/magit-todos config.
 ;;; TODO: Add multiple-cursors config.
 ;;; TODO: Add hyperbole's zoom-frm package.
-;;; TODO: Add parrot config.
-;;; TODO: Add nyan-moed config.
+;;; TODO: Add prescient config.
 ;;; Code:
 
 
@@ -34,6 +33,7 @@
 (use-package amx :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/amx.el"))
 (use-package avy :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/avy.el"))
 (use-package beacon :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/beacon.el"))
+(use-package blackout :straight (blackout :host github :repo "raxod502/blackout") :no-require t)
 (use-package boon :straight t :no-require t :after which-key :config (load-file "~/.emacs.d/settings/configs/boon.el"))
 (use-package circe :straight t :no-require t)
 (use-package command-log-mode :straight t :no-require t)
@@ -46,6 +46,7 @@
 (use-package dashboard :straight t :no-require t)
 (use-package deadgrep :straight t :no-require t)
 (use-package delight :straight t :no-require t)
+(use-package diff-hl :straight t :no-require t)
 (use-package dimmer :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/dimmer.el"))
 (use-package dired-hacks :disabled :straight t :no-require t)
 (use-package doom-modeline :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/doom-modeline.el"))
@@ -94,9 +95,13 @@
 (use-package org-timeline :straight t :no-require t)
 (use-package org-toc :straight (toc-org) :no-require t)
 (use-package origami :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/origami.el"))
+(use-package page-break-lines :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/page-break-lines.el"))
 (use-package parrot :straight t :no-require t)
 (use-package pdf-tools :straight t :no-require t)
 (use-package powerline :disabled :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/powerline.el"))
+(use-package prescient :straight t :no-require t)
+(use-package prescient-comapny :straight (company-prescient) :no-require t :after company)
+(use-package prescient-ivy :straight (ivy-prescient) :no-require t :after ivy)
 (use-package pretty-mode :straight t :no-require t)
 (use-package prodigy :straight t :no-require t)
 (use-package projectile :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/projectile.el"))
@@ -120,7 +125,7 @@
 ;;(use-package auctex :straight t :no-require t)
 
 ;; Load last in order to blackout.
-(use-package blackout :straight (blackout :host github :repo "raxod502/blackout") :no-require t :config (load-file "~/.emacs.d/settings/configs/blackout.el"))
+(load-file "~/.emacs.d/settings/configs/blackout.el")
 
 ;; Themes
 (use-package doom-themes :straight t :no-require t :config (load-theme 'doom-dracula t))
