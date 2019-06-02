@@ -4,6 +4,8 @@
 ;;; TODO: Add alphapapa/magit-todos config.
 ;;; TODO: Add multiple-cursors config.
 ;;; TODO: Add hyperbole's zoom-frm package.
+;;; TODO: Add parrot config.
+;;; TODO: Add nyan-moed config.
 ;;; Code:
 
 
@@ -81,6 +83,7 @@
 (use-package mu4e :straight t :no-require t)
 (use-package mu4e-overview :straight t :no-require t)
 (use-package multiple-cursors :straight t :no-require t)
+(use-package nyan-mode :straight t :no-require t)
 (use-package org-brain :straight t :no-require t)
 (use-package org-bullets :straight t :no-require t)
 (use-package org-cliplink :straight t :no-require t)
@@ -91,11 +94,12 @@
 (use-package org-timeline :straight t :no-require t)
 (use-package org-toc :straight (toc-org) :no-require t)
 (use-package origami :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/origami.el"))
+(use-package parrot :straight t :no-require t)
 (use-package pdf-tools :straight t :no-require t)
 (use-package powerline :disabled :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/powerline.el"))
 (use-package pretty-mode :straight t :no-require t)
 (use-package prodigy :straight t :no-require t)
-(use-package projectile :straight t :no-require t)
+(use-package projectile :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/projectile.el"))
 (use-package ripgrep :straight t :no-require t)
 (use-package smart-mode-line :disabled :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/smart-mode-line.el"))
 (use-package smartparens :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/smartparens.el"))

@@ -85,6 +85,8 @@ _h_ ^+^ _l_ | _u_nmark  ^ |
     ("h" split-window-below "split below")
     ("s" ace-swap-window "swap")
     ("v" split-window-right "split right")
+    ("mi" ivy-minibuffer-grow "minibuffer inc")
+    ("md" ivy-minibuffer-shrink "minibuffer dec")
     ("x" ace-delete-window "delete window")
     ("z" ace-delete-other-windows "delete other windows")
     )

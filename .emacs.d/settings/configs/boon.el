@@ -46,6 +46,9 @@
 (define-key boon-command-map "ls" 'sort-lines)
 (define-key boon-command-map "oa" 'origami-toggle-all-nodes)
 (define-key boon-command-map "oo" 'origami-toggle-node)
+(define-key boon-command-map "pff" 'projectile-find-file)
+(define-key boon-command-map "pfr" 'projectile-recentf)
+(define-key boon-command-map "prr" 'projectile-ripgrep)
 (define-key boon-command-map "rq" 'vr/query-replace)
 (define-key boon-command-map "rr" 'vr/replace)
 (define-key boon-command-map "rs" 'swiper-query-replace)
@@ -67,6 +70,8 @@
     "Cw"	"case change word"
     "Q"		"exit emacs"
     "W"		"window"
+    "Wh"	"hydra-window"
+    "Wm"	"minifuffer"
     "a"		"avy"
     "b"		"buffers"
     "c"		"counsel"
@@ -98,6 +103,12 @@
     "oa"    "toggle all"
     "oo"    "toggle node"
     "q"		"exit"
+    "p"		"projectile"
+    "pf"	"files"
+    "pff"	"open file"
+    "pfr"	"recent files"
+    "pr"	"regexp"
+    "prr"	"ripgrep"
     "r"     "regexp"
     "rq"    "query"
     "rr"    "regexp"
