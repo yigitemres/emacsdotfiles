@@ -5,6 +5,7 @@
 ;;; TODO: Add multiple-cursors config.
 ;;; TODO: Add hyperbole's zoom-frm package.
 ;;; TODO: Add prescient config.
+;;; TODO: Add fill-column-indicator config.
 ;;; Code:
 
 
@@ -27,6 +28,7 @@
 ;;(use-package hyperbole :straight t :no-require t)
 
 ;; Packages
+;;(use-package fill-column-indicator :straight t :no-require t)
 (use-package ace-popup-menu :straight t :no-require t)
 (use-package ace-window :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/ace-window.el"))
 (use-package aggressive-indent :straight t :no-require t)
@@ -90,6 +92,7 @@
 (use-package org-cliplink :straight t :no-require t)
 (use-package org-download :straight t :no-require t)
 (use-package org-ioslide :straight (ox-ioslide) :no-require t)
+(use-package org-reveal :straight (ox-reveal) :no-require t)
 (use-package org-page :straight t :no-require t)
 (use-package org-plus-contrib :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/org.el"))
 (use-package org-timeline :straight t :no-require t)

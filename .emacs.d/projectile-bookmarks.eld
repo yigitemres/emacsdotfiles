@@ -1,1 +1,1 @@
-("~/gitrepos/awesomelist/" "~/Google Drive/cv/" "~/.emacs.d/")
+("~/.emacs.d/straight/build/" "~/gitrepos/awesomelist/" "~/Google Drive/cv/" "~/.emacs.d/")

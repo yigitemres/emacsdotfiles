@@ -4,26 +4,26 @@
     )
 
 (if (eq system-type 'windows-nt)
-    (define-coding-system-alias 'cp65001 'utf-8)
-    (prefer-coding-system 'utf-8)
-    (set-default-coding-systems 'utf-8)
-    (set-keyboard-coding-system 'utf-8)
-    (set-terminal-coding-system 'utf-8)
+;;	(define-coding-system-alias 'cp65001-dos 'utf-8-dos)
+    (prefer-coding-system 'utf-8-dos)
+    (set-default-coding-systems 'utf-8-dos)
+    (set-keyboard-coding-system 'utf-8-dos)
+    (set-terminal-coding-system 'utf-8-dos)
 
     (setq
-        coding-system-for-read 'utf-8
-        coding-system-for-write 'utf-8))
+        coding-system-for-read 'utf-8-dos
+        coding-system-for-write 'utf-8-dos))
 
-(if (eq system-type 'gnu/linux)
-    (define-coding-system-alias 'cp65001-unix 'utf-8-unix)
-    (prefer-coding-system 'utf-8-unix)
-    (set-default-coding-systems 'utf-8-unix)
-    (set-keyboard-coding-system 'utf-8-unix)
-    (set-terminal-coding-system 'utf-8-unix)
-
-    (setq
-        coding-system-for-read 'utf-8-unix
-        coding-system-for-write 'utf-8-unix))
+;;(if (eq system-type 'gnu/linux)
+;;	(define-coding-system-alias 'cp65001-unix 'utf-8-unix)
+;;	(prefer-coding-system 'utf-8-unix)
+;;	(set-default-coding-systems 'utf-8-unix)
+;;	(set-keyboard-coding-system 'utf-8-unix)
+;;	(set-terminal-coding-system 'utf-8-unix)
+;;
+;;	(setq
+;;		coding-system-for-read 'utf-8-unix
+;;		coding-system-for-write 'utf-8-unix))
 
 
 (setq default-directory "~/")
@@ -72,7 +72,7 @@
 (setq confirm-kill-emacs #'y-or-n-p)
 
 (add-hook 'text-mode-hook 'auto-fill-mode)
-(setq-default fill-column 99)
+(setq-default fill-column 80)
 
 
 (setq
