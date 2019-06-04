@@ -88,7 +88,7 @@
 (use-package multiple-cursors :straight t :no-require t)
 (use-package nyan-mode :straight t :no-require t)
 (use-package org-brain :straight t :no-require t)
-(use-package org-bullets :straight t :no-require t :init/el-patch (load-file "~/.emacs.d/settings/configs/org-bullets.el"))
+(use-package org-bullets :straight t :no-require t :init (load-file "~/.emacs.d/settings/configs/org-bullets.el"))
 (use-package org-cliplink :straight t :no-require t)
 (use-package org-download :straight t :no-require t)
 (use-package org-ioslide :straight (ox-ioslide) :no-require t)
