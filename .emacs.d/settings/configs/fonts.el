@@ -8,7 +8,8 @@
 ;;;;;;;;;;;;;
 
 (setq
-    selectedfont "FuraCode NF-9"
+    selectedfont "Iosevka NF-9"
+;;    selectedfont "FuraCode NF-9"
     fallbackfont "Consolas"
     )
 

@@ -16,8 +16,6 @@
 ;;(setq straight-use-symlinks t)
 (setq straight-check-for-modifications '(check-on-save))
 
-
-
 (straight-use-package 'git)
 
 (defun org-git-version ()
@@ -52,3 +50,5 @@ Inserted by installing org-mode or when a release is made."
 
 ;; Use-Package
 (straight-use-package 'use-package)
+
+(use-package el-patch :straight t :config (load-file "~/.emacs.d/settings/configs/el-patch.el"))
