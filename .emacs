@@ -1,11 +1,12 @@
 ;;; dotEmacs --- Summary
 ;;; Commentary:
-;;; TODO: Add vermiculus/magithub config.
-;;; TODO: Add alphapapa/magit-todos config.
-;;; TODO: Add multiple-cursors config.
-;;; TODO: Add hyperbole's zoom-frm package.
-;;; TODO: Add prescient config.
-;;; TODO: Add fill-column-indicator config.
+;;; CONFIG: alphapapa/magit-todos
+;;; CONFIG: multiple-cursors
+;;; CONFIG: prescient
+;;; CONFIG: vermiculus/magithub
+;;; FIX-CONFIG: fill-column-indicator (it ruins everything)
+;;; FIX-CONFIG: hyperbole (it ruins everything)
+;;; FIX: auctex with el-patch if possible.
 ;;; Code:
 
 
@@ -24,11 +25,7 @@
 (load-file "~/.emacs.d/settings/configs/fonts.el")
 (load-file "~/.emacs.d/settings/bootstraps/bootstrap.el")
 
-
-;;(use-package hyperbole :straight t :no-require t)
-
 ;; Packages
-;;(use-package fill-column-indicator :straight t :no-require t)
 (use-package ace-popup-menu :straight t :no-require t)
 (use-package ace-window :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/ace-window.el"))
 (use-package aggressive-indent :straight t :no-require t)
@@ -40,7 +37,7 @@
 (use-package circe :straight t :no-require t)
 (use-package command-log-mode :straight t :no-require t)
 (use-package company :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/company.el"))
-(use-package company-lsp :straight :no-require t :after lsp-mode company :config (load-file "~/.emacs.d/settings/configs/company-lsp.el"))
+(use-package company-lsp :straight t :no-require t :after lsp-mode company :config (load-file "~/.emacs.d/settings/configs/company-lsp.el"))
 (use-package counsel :straight t :no-require t)
 (use-package crux :straight t :no-require t)
 (use-package ctags :straight t :no-require t)
@@ -71,7 +68,7 @@
 (use-package goto-line-preview :straight t :no-require t)
 (use-package gtags :straight t :no-require t)
 (use-package helm :disabled :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/helm.el"))
-(use-package hl-todo :straight t :no-require t)
+(use-package hl-todo :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/hl-todo.el"))
 (use-package hydra :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/hydra.el"))
 (use-package ivy :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/ivy.el"))
 (use-package ivy-posframe :straight t :no-require t :requires ivy :after ivy)
@@ -123,9 +120,6 @@
 (use-package yasnippet :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/yasnippet.el"))
 (use-package yasnippet-snippets :disabled :straight t :no-require t)
 (use-package zoom :straight t :config (load-file "~/.emacs.d/settings/configs/zoom.el"))
-
-;; Not Working
-;;(use-package auctex :straight t :no-require t)
 
 ;; Load last in order to blackout.
 (load-file "~/.emacs.d/settings/configs/blackout.el")
