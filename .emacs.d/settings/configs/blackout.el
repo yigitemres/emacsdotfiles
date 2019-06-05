@@ -5,6 +5,7 @@
 (blackout 'editorconfig-mode)
 (blackout 'eldoc-mode)
 (blackout 'ivy-mode)
+(blackout 'nyan-mode)
 (blackout 'linum-relative-mode)
 (blackout 'page-break-lines-mode)
 (blackout 'projectile-mode)

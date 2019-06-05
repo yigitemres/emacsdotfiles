@@ -49,7 +49,7 @@
 (setq
     column-number-mode t
     line-number-mode t
-    size-indication-mode t
+    size-indication-mode 'nil
     )
 
 (setq display-time-format "%F %R")

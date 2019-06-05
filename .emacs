@@ -4,9 +4,10 @@
 ;;; CONFIG: multiple-cursors
 ;;; CONFIG: prescient
 ;;; CONFIG: vermiculus/magithub
-;;; FIX-CONFIG: fill-column-indicator (it ruins everything)
-;;; FIX-CONFIG: hyperbole (it ruins everything)
-;;; FIX: auctex with el-patch if possible.
+;;; INSTALL-FIX-CONFIG: fill-column-indicator (it ruins everything)
+;;; INSTALL-FIX-CONFIG: hyperbole (it ruins everything)
+;;; INSTALL-FIX: auctex with el-patch if possible.
+;;; FIX: custom doom-modeline
 ;;; Code:
 
 
@@ -48,7 +49,7 @@
 (use-package diff-hl :straight t :no-require t)
 (use-package dimmer :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/dimmer.el"))
 (use-package dired-hacks :disabled :straight t :no-require t)
-(use-package doom-modeline :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/doom-modeline.el"))
+(use-package doom-modeline :straight t :no-require t :init (load-file "~/.emacs.d/settings/inits/doom-modeline.el") :config (load-file "~/.emacs.d/settings/configs/doom-modeline.el"))
 (use-package eaf :straight (emacs-application-framework :host github :repo "manateelazycat/emacs-application-framework") :no-require t)
 (use-package editorconfig :straight t :config (load-file "~/.emacs.d/settings/configs/editorconfig.el"))
 (use-package elfeed :straight t :no-require t)
@@ -85,7 +86,7 @@
 (use-package multiple-cursors :straight t :no-require t)
 (use-package nyan-mode :straight t :no-require t)
 (use-package org-brain :straight t :no-require t)
-(use-package org-bullets :straight t :no-require t :init (load-file "~/.emacs.d/settings/configs/org-bullets.el"))
+(use-package org-bullets :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/org-bullets.el"))
 (use-package org-cliplink :straight t :no-require t)
 (use-package org-download :straight t :no-require t)
 (use-package org-ioslide :straight (ox-ioslide) :no-require t)
@@ -115,6 +116,7 @@
 (use-package treemacs :straight t :no-require t)
 (use-package undo-tree :straight t :no-require t)
 (use-package visual-regexp :straight t :no-require t)
+(use-package wc-mode :straight t :no-require t)
 (use-package which-key :straight t  :config (load-file "~/.emacs.d/settings/configs/which-key.el"))
 (use-package wttrin :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/wttrin.el"))
 (use-package yasnippet :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/yasnippet.el"))

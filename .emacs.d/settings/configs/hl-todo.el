@@ -1,3 +1,4 @@
+(global-hl-todo-mode)
 (setq todovarsfaces
     '(
          ("CONFIG" . "#cc9393")
