@@ -46,9 +46,7 @@
 (define-key boon-command-map "ls" 'sort-lines)
 (define-key boon-command-map "oa" 'origami-toggle-all-nodes)
 (define-key boon-command-map "oo" 'origami-toggle-node)
-(define-key boon-command-map "pff" 'projectile-find-file)
-(define-key boon-command-map "pfr" 'projectile-recentf)
-(define-key boon-command-map "prr" 'projectile-ripgrep)
+(define-key boon-command-map "p" 'projectile-command-map)
 (define-key boon-command-map "rq" 'vr/query-replace)
 (define-key boon-command-map "rr" 'vr/replace)
 (define-key boon-command-map "rs" 'swiper-query-replace)
@@ -59,6 +57,7 @@
 (define-key boon-command-map "ss" 'swiper)
 (define-key boon-command-map "t" 'treemacs)
 (define-key boon-command-map "z" 'hydra-zoom/body)
+
 
 (define-key boon-command-map "Q" 'save-buffers-kill-terminal)
 
@@ -104,11 +103,6 @@
     "oo"    "toggle node"
     "q"		"exit"
     "p"		"projectile"
-    "pf"	"files"
-    "pff"	"open file"
-    "pfr"	"recent files"
-    "pr"	"regexp"
-    "prr"	"ripgrep"
     "r"     "regexp"
     "rq"    "query"
     "rr"    "regexp"

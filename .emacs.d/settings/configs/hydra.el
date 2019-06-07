@@ -21,6 +21,7 @@
     ("b" ivy-switch-buffer "list")
     ("k" kill-buffer "kill")
     ("l" ivy-switch-buffer "list")
+    ("i" ibuffer "ibuffer")
     )
 
 (defhydra hydra-counsel()
@@ -80,8 +81,9 @@ _h_ ^+^ _l_ | _u_nmark  ^ |
 (defhydra hydra-window()
     "window"
 
-    ("TAB" ace-window "ace window")
-    ("a" ace-window "ace window")
+    ("TAB" other-window "other window")
+    ("<backtab>" (lambda() (interactive) (other-window -1)) "prev window")
+    ("w" ace-window "ace window")
     ("h" split-window-below "split below")
     ("s" ace-swap-window "swap")
     ("v" split-window-right "split right")

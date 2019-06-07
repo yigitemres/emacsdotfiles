@@ -1,4 +1,4 @@
-(global-hl-todo-mode)
+(global-hl-todo-mode t)
 (setq todovarsfaces
     '(
          ("CONFIG" . "#cc9393")
@@ -8,18 +8,15 @@
          ("DONT" . "#5f7f5f")
          ("FAIL" . "#ff0000")
          ("FIXME" . "#cc9393")
-         ("HACK" . "#d0bf8f")
          ("HOLD" . "#d0bf8f")
          ("INSTALL" . "#cc9393")
-         ("KLUDGE" . "#d0bf8f")
          ("NEXT" . "#dca3a3")
          ("NOTE" . "#d0bf8f")
          ("OKAY" . "#7cb8bb")
          ("PROG" . "#7cb8bb")
          ("TEMP" . "#d0bf8f")
-         ("THEM" . "#dc8cc3")
          ("TODO" . "#00ff00")
-         ("XXX+" . "#cc9393")
+
          ("\\?\\?\\?+" . "#cc9393"))
     )
 

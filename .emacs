@@ -1,13 +1,15 @@
 ;;; dotEmacs --- Summary
 ;;; Commentary:
 ;;; CONFIG: alphapapa/magit-todos
-;;; CONFIG: multiple-cursors
-;;; CONFIG: prescient
+;;; CONFIG: pdf-tools
 ;;; CONFIG: vermiculus/magithub
-;;; INSTALL-FIX-CONFIG: fill-column-indicator (it ruins everything)
+;;; INSTALL-CONFIG: ch11ng/exwm (TODO:awesome)
+;;; INSTALL-CONFIG: chimay/torus (TODO-?:awesome)
+;;; INSTALL-CONFIG: jrockway/eproject (TODO-?: awesome)
+;;; INSTALL-CONFIG: manateelazycat/awesome-tab (TODO:awesome);;
+;;; INSTALL-CONFIG: nex3/perspective.el (TODO: awesome)
 ;;; INSTALL-FIX-CONFIG: hyperbole (it ruins everything)
-;;; INSTALL-FIX: auctex with el-patch if possible.
-;;; FIX: custom doom-modeline
+;;; TODO-CONFIG: * package
 ;;; Code:
 
 
@@ -16,21 +18,21 @@
 ;; to the start the profile-dotemacs!
 
 ;;(setq debug-on-error t)
-
 (setq warning-minimum-level :emergency)
 
 (setq custom-file "~/.emacs.d/custom.el")
 
 ;; Emacs Related Configs
 (load-file "~/.emacs.d/settings/configs/emacs.el")
-(load-file "~/.emacs.d/settings/configs/fonts.el")
 (load-file "~/.emacs.d/settings/bootstraps/bootstrap.el")
 
 ;; Packages
+
 (use-package ace-popup-menu :straight t :no-require t)
 (use-package ace-window :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/ace-window.el"))
 (use-package aggressive-indent :straight t :no-require t)
 (use-package amx :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/amx.el"))
+(use-package auctex :straight t :no-require t)
 (use-package avy :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/avy.el"))
 (use-package beacon :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/beacon.el"))
 (use-package blackout :straight (blackout :host github :repo "raxod502/blackout") :no-require t)
@@ -39,16 +41,17 @@
 (use-package command-log-mode :straight t :no-require t)
 (use-package company :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/company.el"))
 (use-package company-lsp :straight t :no-require t :after lsp-mode company :config (load-file "~/.emacs.d/settings/configs/company-lsp.el"))
+(use-package company-prescient :straight t :no-require t :after company :config (load-file "~/.emacs.d/settings/configs/company-prescient.el"))
 (use-package counsel :straight t :no-require t)
 (use-package crux :straight t :no-require t)
 (use-package ctags :straight t :no-require t)
 (use-package dap-mode :straight t :no-require t)
-(use-package dashboard :straight t :no-require t)
+(use-package dashboard :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/dashboard.el"))
 (use-package deadgrep :straight t :no-require t)
 (use-package delight :straight t :no-require t)
 (use-package diff-hl :straight t :no-require t)
 (use-package dimmer :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/dimmer.el"))
-(use-package dired-hacks :disabled :straight t :no-require t)
+(use-package dired-hacks :straight t :no-require t)
 (use-package doom-modeline :straight t :no-require t :init (load-file "~/.emacs.d/settings/inits/doom-modeline.el") :config (load-file "~/.emacs.d/settings/configs/doom-modeline.el"))
 (use-package eaf :straight (emacs-application-framework :host github :repo "manateelazycat/emacs-application-framework") :no-require t)
 (use-package editorconfig :straight t :config (load-file "~/.emacs.d/settings/configs/editorconfig.el"))
@@ -60,6 +63,7 @@
 (use-package emojify :straight t :no-require t)
 (use-package esup :straight t :no-require t)
 (use-package expand-region :straight t :no-require t)
+(use-package fill-column-indicator :straight t :no-require t)
 (use-package flycheck :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/flycheck.el"))
 (use-package flymake :disabled :straight t :no-require t)
 (use-package focus :straight t :no-require t)
@@ -71,8 +75,10 @@
 (use-package helm :disabled :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/helm.el"))
 (use-package hl-todo :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/hl-todo.el"))
 (use-package hydra :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/hydra.el"))
+(use-package imenu-anywhere :straight t :no-require t :after (:any ivy helm))
 (use-package ivy :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/ivy.el"))
-(use-package ivy-posframe :straight t :no-require t :requires ivy :after ivy)
+(use-package ivy-posframe :disabled :straight t :no-require t :requires ivy :after ivy)
+(use-package ivy-prescient :straight t :no-require t :after ivy :config (load-file "~/.emacs.d/settings/configs/ivy-prescient.el"))
 (use-package latex-preview-pane :disabled :straight t :no-require t)
 (use-package linum-relative :disabled :straight t :config (load-file "~/.emacs.d/settings/configs/linum-relative.el"))
 (use-package lsp-mode :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/lsp-mode.el"))
@@ -80,10 +86,10 @@
 (use-package magit :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/magit.el"))
 (use-package magit-todos :straight t :no-require t)
 (use-package magithub :disabled :straight t :no-require t)
+(use-package misc-cmds :straight t :no-require t)
 (use-package modalka :disabled :straight t :no-require t :after which-key :config (load-file "~/.emacs.d/settings/configs/modalka.el"))
 (use-package mu4e :straight t :no-require t)
 (use-package mu4e-overview :straight t :no-require t)
-(use-package multiple-cursors :straight t :no-require t)
 (use-package nyan-mode :straight t :no-require t)
 (use-package org-brain :straight t :no-require t)
 (use-package org-bullets :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/org-bullets.el"))
@@ -91,28 +97,28 @@
 (use-package org-download :straight t :no-require t)
 (use-package org-ioslide :straight (ox-ioslide) :no-require t)
 (use-package org-page :straight t :no-require t)
-(use-package org-plus-contrib :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/org.el"))
+(use-package org :straight t :config (load-file "~/.emacs.d/settings/configs/org.el"))
+(use-package org-protocol-capture-html :straight (org-protocol-capture-html :host github :repo "alphapapa/org-protocol-capture-html") :no-require t)
 (use-package org-reveal :straight (ox-reveal) :no-require t)
 (use-package org-timeline :straight t :no-require t)
 (use-package org-toc :straight (toc-org) :no-require t)
 (use-package origami :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/origami.el"))
 (use-package page-break-lines :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/page-break-lines.el"))
-(use-package parrot :straight t :no-require t)
+(use-package parrot :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/parrot.el"))
 (use-package pdf-tools :straight t :no-require t)
 (use-package powerline :disabled :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/powerline.el"))
-(use-package prescient :straight t :no-require t)
-(use-package prescient-comapny :straight (company-prescient) :no-require t :after company)
-(use-package prescient-ivy :straight (ivy-prescient) :no-require t :after ivy)
+(use-package prescient :straight t :no-require t :after (:any company-prescient ivy-prescient) :config (load-file "~/.emacs.d/settings/configs/prescient.el"))
 (use-package pretty-mode :straight t :no-require t)
 (use-package prodigy :straight t :no-require t)
 (use-package projectile :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/projectile.el"))
+(use-package rainbow-mode :straight t :no-require t)
 (use-package ripgrep :straight t :no-require t)
 (use-package smart-mode-line :disabled :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/smart-mode-line.el"))
 (use-package smartparens :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/smartparens.el"))
 (use-package ssh-agency :straight t :no-require t)
+(use-package stackexhange :straight (sx) :no-require t)
 (use-package swiper :straight t :no-require t)
 (use-package swiper-helm :disabled :straight t :no-require t :requires helm)
-(use-package sx :straight t :no-require t)
 (use-package treemacs :straight t :no-require t)
 (use-package undo-tree :straight t :no-require t)
 (use-package visual-regexp :straight t :no-require t)

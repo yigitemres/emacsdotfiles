@@ -1,5 +1,7 @@
 (declare-function nyan-create 'nyan)
 
+(require 'doom-modeline)
+
 (doom-modeline-def-segment nyan
     (when (and (bound-and-true-p nyan-mode)
               (doom-modeline--active))

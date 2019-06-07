@@ -3,6 +3,8 @@
     user-mail-address "yigitemres@gmail.com"
     )
 
+(setq default-frame-alist '((font . "FuraCode NF-9")))
+
 (if (eq system-type 'windows-nt)
 ;;	(define-coding-system-alias 'cp65001-dos 'utf-8-dos)
     (prefer-coding-system 'utf-8-dos)
@@ -14,20 +16,10 @@
         coding-system-for-read 'utf-8-dos
         coding-system-for-write 'utf-8-dos))
 
-;;(if (eq system-type 'gnu/linux)
-;;	(define-coding-system-alias 'cp65001-unix 'utf-8-unix)
-;;	(prefer-coding-system 'utf-8-unix)
-;;	(set-default-coding-systems 'utf-8-unix)
-;;	(set-keyboard-coding-system 'utf-8-unix)
-;;	(set-terminal-coding-system 'utf-8-unix)
-;;
-;;	(setq
-;;		coding-system-for-read 'utf-8-unix
-;;		coding-system-for-write 'utf-8-unix))
-
 
 (setq default-directory "~/")
 (setq inhibit-startup-screen t)
+;;(setq inhibit-startup-message t)
 
 (setq frame-title-format
     '((:eval (if
