@@ -45,8 +45,8 @@ Inserted by installing org-mode or when a release is made."
 
 (provide 'org-version)
 
-;; This line prevent both  org build while org+contrib exist!
-(straight-use-package '(org :local-repo nil))
+;; This line prevent both org build while org+contrib exist!
+;; (straight-use-package '(org :local-repo nil))
 
 ;; Use-Package
 (straight-use-package 'use-package)

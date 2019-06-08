@@ -1,9 +1,8 @@
 ;; Taken from https://blobsg.jft.rocks/emacs/unicode-for-orgmode-checkboxes.html
+;; https://orgmode.org/manual/capture-protocol.html
 
 (require 'org-protocol)
 (require 'org-capture)
-
-(add-to-list 'load-path "~/.emacs.d/orgprotocol")
 
 (setq org-default-notes-file "~/.emacs.d/org/notes.org")
 (setq org-protocol-default-template-key "l")
