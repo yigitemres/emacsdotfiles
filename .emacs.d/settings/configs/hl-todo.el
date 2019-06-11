@@ -1,4 +1,7 @@
+;; Add faces ~/.emacs.d/settings/configs/org.el
+
 (global-hl-todo-mode t)
+
 (setq todovarsfaces
     '(
          ("CONFIG" . "#cc9393")
@@ -10,6 +13,7 @@
          ("FIXME" . "#cc9393")
          ("HOLD" . "#d0bf8f")
          ("INSTALL" . "#cc9393")
+         ("LINKS" . "#00ff00")
          ("NEXT" . "#dca3a3")
          ("NOTE" . "#d0bf8f")
          ("OKAY" . "#7cb8bb")
