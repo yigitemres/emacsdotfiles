@@ -17,7 +17,6 @@
 
 (define-key boon-command-map "i" 'boon-insert)
 
-(define-key boon-command-map ":" 'counsel-M-x)
 (define-key boon-command-map "Cw" 'hydra-casechangeword/body)
 (define-key boon-command-map "W" 'hydra-window/body)
 

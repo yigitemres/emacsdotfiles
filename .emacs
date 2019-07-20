@@ -28,8 +28,10 @@
 
 ;; Packages
 
+(use-package hercules :straight (hercules.el :host gitlab :repo "jjzmajic/hercules.el"))
 (use-package ace-popup-menu :straight t :no-require t)
 (use-package ace-window :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/ace-window.el"))
+(use-package all-the-icons :straight t :no-require t)
 (use-package aggressive-indent :straight t :no-require t)
 (use-package amx :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/amx.el"))
 (use-package auctex :straight t :no-require t)
@@ -93,6 +95,7 @@
 (use-package modalka :disabled :straight t :no-require t :after which-key :config (load-file "~/.emacs.d/settings/configs/modalka.el"))
 (use-package mu4e :straight t :no-require t)
 (use-package mu4e-overview :straight t :no-require t)
+(use-package multiple-cursors :straight t :no-require t)
 (use-package nyan-mode :straight t :no-require t)
 (use-package org :straight t :config (load-file "~/.emacs.d/settings/configs/org.el"))
 (use-package org-brain :straight t :no-require t :after org)
@@ -114,6 +117,8 @@
 (use-package pretty-mode :straight t :no-require t)
 (use-package prodigy :straight t :no-require t)
 (use-package projectile :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/projectile.el"))
+(use-package rainbow-delimiters :straight t :no-require t)
+(use-package rainbow-identifiers :straight t :no-require t)
 (use-package rainbow-mode :straight t :no-require t)
 (use-package ripgrep :straight t :no-require t)
 (use-package smart-mode-line :disabled :straight t :no-require t :config (load-file "~/.emacs.d/settings/configs/smart-mode-line.el"))
